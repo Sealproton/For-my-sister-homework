@@ -21,10 +21,17 @@ submit.addEventListener("click", async () => {
     let result =
       Math.pow(parseFloat(c.value), 2) - Math.pow(parseFloat(a.value), 2);
     b.value = Math.sqrt(result);
-  } else {
+  } else if (c.value == "") {
     let result =
       Math.pow(parseFloat(a.value), 2) + Math.pow(parseFloat(b.value), 2);
     c.value = Math.sqrt(result);
+  } else if (
+    Math.pow(parseFloat(c.value), 2) ===
+    Math.pow(parseFloat(a.value), 2) + Math.pow(parseFloat(b.value), 2)
+  ) {
+    alert("เป็นสามเหลี่ยมมุมฉาก");
+  } else {
+    alert("ไม่เป็นสามเหลี่ยมมุมฉาก");
   }
 });
 
