@@ -38,6 +38,7 @@ body {
 }
 
 .btn {
+  margin-bottom: 5px;
   height: 32px;
   font-size: larger;
   border-radius: 100px;
@@ -52,6 +53,7 @@ body {
 }
 
 .clear {
+  margin-bottom: 5px;
   margin-left: 5px;
   height: 32px;
   font-size: larger;
