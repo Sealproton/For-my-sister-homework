@@ -20,7 +20,7 @@ btn_pow.addEventListener("click", async () => {
     let result = Math.sqrt(input);
     answer.innerHTML = `รากที่ 2 ของ ${input} มีค่าเท่ากับ ${result} `;
   }
-  input = "";
+  pow_input.value = "";
 });
 
 submit.addEventListener("click", async () => {
