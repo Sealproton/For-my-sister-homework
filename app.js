@@ -3,6 +3,25 @@ const b = document.getElementById("b-data");
 const c = document.getElementById("c-data");
 const submit = document.querySelector(".btn");
 const clear = document.querySelector(".clear");
+const pow_input = document.querySelector(".pow");
+const choices = document.getElementById("choices");
+const btn_pow = document.querySelector(".btn-pow");
+const answer = document.getElementById("answer");
+
+btn_pow.addEventListener("click", async () => {
+  let input = parseFloat(pow_input.value);
+  let picked = choices.value;
+  if (input == "" || isNaN(input)) {
+    alert("กรุณาใส่ตัวเลข");
+  } else if (picked == "pow") {
+    let result = Math.pow(input, 2);
+    answer.innerHTML = `${input} ยกกำลัง 2 มีค่าเท่ากับ ${result} `;
+  } else {
+    let result = Math.sqrt(input);
+    answer.innerHTML = `รากที่ 2 ของ ${input} มีค่าเท่ากับ ${result} `;
+  }
+  input = "";
+});
 
 submit.addEventListener("click", async () => {
   if (
